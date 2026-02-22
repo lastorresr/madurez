@@ -8,6 +8,8 @@ st.title("Diagnóstico de Madurez Organizacional")
 
 st.markdown("""
 Seleccione la descripción que mejor representa la situación actual de su organización en cada dimensión.
+
+El modelo contempla cinco niveles evolutivos de madurez organizacional.
 """)
 
 st.divider()
@@ -15,51 +17,75 @@ st.divider()
 modelo = {
 
     "Alineación Estratégica": [
-        "Fase 1: La organización está centrada en áreas funcionales y líneas de producto.",
-        "Fase 2: Se reconoce la importancia de los procesos dentro de la estrategia organizacional.",
-        "Fase 3: Los procesos están vinculados explícitamente con los objetivos estratégicos.",
-        "Fase 4: La optimización de procesos es utilizada como fuente de ventaja competitiva.",
-        "Fase 5: Existe integración estratégica entre procesos propios, clientes y proveedores dentro de una red de valor."
+        "La organización está estructurada principalmente alrededor de áreas funcionales, líneas de producto o unidades independientes. La estrategia se gestiona desde cada área sin una visión integral de procesos.",
+        
+        "La organización reconoce la importancia de los procesos dentro de la estrategia. Se discute su rol, aunque la estructura funcional sigue predominando.",
+        
+        "Los procesos están claramente vinculados con los objetivos estratégicos mediante factores críticos de éxito. La gestión estratégica incluye la gestión por procesos.",
+        
+        "La optimización de procesos es un eje central para lograr ventajas competitivas. La estrategia se ejecuta a través de la mejora sistemática y controlada de procesos.",
+        
+        "La alineación estratégica integra procesos internos con los de clientes y proveedores dentro de una red de valor, buscando agilidad, competitividad y adaptación continua."
     ],
 
     "Cultura y Liderazgo": [
-        "Fase 1: Cultura orientada a jerarquías funcionales.",
-        "Fase 2: Líderes impulsan reingeniería y mejora de procesos.",
-        "Fase 3: Cultura basada en líderes de proceso y mejoramiento continuo.",
-        "Fase 4: Cultura basada en colaboración, transparencia y consenso.",
-        "Fase 5: Liderazgo apoyado en análisis avanzado y simulación de escenarios."
+        "La cultura organizacional está orientada principalmente a jerarquías funcionales. Los líderes priorizan resultados de su área sobre la visión integral.",
+        
+        "Los líderes promueven iniciativas de mejora y reingeniería de procesos, aunque la cultura funcional aún es predominante.",
+        
+        "La cultura gira alrededor de líderes o dueños de proceso que impulsan el mejoramiento continuo y la generación de valor.",
+        
+        "Predomina una cultura de colaboración, transparencia y consenso. El liderazgo fomenta responsabilidad compartida por los procesos.",
+        
+        "El liderazgo se apoya en análisis avanzado de información y simulación de escenarios para la toma de decisiones estratégicas y operativas."
     ],
 
     "Personas": [
-        "Fase 1: Enfoque en cumplir expectativas del jefe inmediato.",
-        "Fase 2: Algunas personas entrenadas en modelación de procesos.",
-        "Fase 3: Trabajo colaborativo en mejora de procesos.",
-        "Fase 4: Empleados anticipan impactos más allá de su función.",
-        "Fase 5: Personas relacionan metas con procesos y generan innovación."
+        "Los empleados se enfocan principalmente en cumplir con las expectativas de su jefe inmediato, con poco entendimiento de los procesos de principio a fin.",
+        
+        "Algunos colaboradores han recibido formación en modelación y mejora de procesos y comienzan a comprender su impacto transversal.",
+        
+        "Las personas trabajan de manera colaborativa en la identificación y mejora de procesos organizacionales.",
+        
+        "Los empleados anticipan el impacto de los cambios en procesos más allá de su función, colaboran activamente y comparten información.",
+        
+        "Las personas analizan información estratégica, relacionan metas organizacionales con procesos y generan innovación continua."
     ],
 
     "Gobernabilidad": [
-        "Fase 1: Estructura centrada en departamentos funcionales.",
-        "Fase 2: Integración limitada, decisiones funcionales.",
-        "Fase 3: Indicadores de gestión de procesos definidos.",
-        "Fase 4: Cuadros de mando e incentivos vinculados a procesos.",
-        "Fase 5: Estructura ágil que permite adaptación rápida."
+        "La estructura organizacional está centrada en departamentos funcionales con indicadores individuales y competencia interna.",
+        
+        "Existen intentos de integración entre áreas, pero las decisiones siguen tomándose principalmente por funciones.",
+        
+        "Existen indicadores de gestión de procesos que sirven como base para el mejoramiento continuo.",
+        
+        "Se utilizan cuadros de mando e incentivos alineados al desempeño de procesos y a la mejora continua.",
+        
+        "La estructura organizacional permite adaptarse ágilmente a cambios constantes y gestionar transformaciones de manera sistemática."
     ],
 
     "Procesos": [
-        "Fase 1: Procesos estáticos y comunicación informal.",
-        "Fase 2: Procesos interfuncionales definidos parcialmente.",
-        "Fase 3: Procesos como base de la gestión.",
-        "Fase 4: Métodos estructurados de control y mejora continua.",
-        "Fase 5: Integración y optimización inter-compañía e innovación constante."
+        "Los procesos son estáticos y la comunicación entre áreas es principalmente informal y no estructurada.",
+        
+        "Se han definido algunos procesos interfuncionales, aunque el mejoramiento es limitado.",
+        
+        "Los procesos constituyen la base de la gestión organizacional y se aplica mejoramiento continuo.",
+        
+        "Se implementan métodos estructurados para el control, medición y optimización sistemática de procesos.",
+        
+        "Existe integración y optimización de procesos inter-compañía, con innovación constante y entrenamiento continuo."
     ],
 
     "Tecnología Informática": [
-        "Fase 1: Sistemas funcionales no integrados.",
-        "Fase 2: Implementación de ERP.",
-        "Fase 3: Tecnología orientada a automatización de procesos.",
-        "Fase 4: Uso de BPM y centros de competencia.",
-        "Fase 5: Infraestructura que soporta múltiples escenarios de negocio."
+        "Los sistemas informáticos están orientados a necesidades funcionales específicas y no están integrados.",
+        
+        "Se han implementado sistemas integrados (como ERP) para mejorar la coordinación entre áreas.",
+        
+        "La tecnología apoya la automatización, monitoreo y control de procesos organizacionales.",
+        
+        "Se utilizan plataformas BPM y la infraestructura tecnológica responde ágilmente a cambios en procesos.",
+        
+        "La infraestructura tecnológica soporta múltiples escenarios de negocio, análisis avanzado y adaptación estratégica."
     ]
 }
 
@@ -69,13 +95,12 @@ for dimension in modelo:
     st.subheader(dimension)
 
     opcion = st.radio(
-        "Seleccione una opción:",
+        "Seleccione la opción que mejor describe su organización:",
         modelo[dimension],
         key=dimension
     )
 
-    # Extraer número de fase
-    fase = int(opcion.split(":")[0].replace("Fase","").strip())
+    fase = modelo[dimension].index(opcion) + 1
     respuestas[dimension] = fase
 
     st.divider()
@@ -95,7 +120,7 @@ if st.button("Generar Diagnóstico"):
     }
 
     st.success(f"Nivel Global de Madurez: {nombres_fase[nivel_global]}")
-    st.write(f"Promedio global: {promedio}")
+    st.write(f"Promedio global obtenido: {promedio}")
 
     st.divider()
 
@@ -103,7 +128,7 @@ if st.button("Generar Diagnóstico"):
     ax.bar(respuestas.keys(), respuestas.values())
     ax.set_ylim(1,5)
     ax.set_ylabel("Nivel de Madurez (1-5)")
-    ax.set_title("Madurez por Dimensión")
+    ax.set_title("Madurez Organizacional por Dimensión")
     plt.xticks(rotation=45)
 
     st.pyplot(fig)
